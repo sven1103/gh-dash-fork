@@ -248,7 +248,8 @@ func (m *Model) runCustomIssueCommand(commandTemplate string, issueData *data.Is
 		&map[string]any{
 			"RepoName":    issueData.GetRepoNameWithOwner(),
 			"IssueNumber": issueData.Number,
-			"Author":      issueData.Author.Login,
+			"IssueTitle": issueData.Title,
+			"Author":     issueData.Author.Login,
 		},
 	)
 }
